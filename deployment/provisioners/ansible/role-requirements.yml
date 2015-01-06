@@ -1,5 +1,3 @@
+---
 # from github
-- src: https://github.com/geerlingguy/ansible-role-jenkins
-
-
-
+- src: 'https://github.com/salvadormrf/ansible-jenkins'

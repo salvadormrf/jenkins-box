@@ -11,5 +11,5 @@
   sudo: yes
   roles:
     - { role: ubuntu }
-    - { role: jenkins } # TODO: get with ansible-galaxy
+    - { role: ansible-jenkins }
     

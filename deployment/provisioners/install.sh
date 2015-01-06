@@ -1,11 +1,9 @@
-# TODO
+# Install instructions..
 
-sudo apt-get update
-sudo apt-get install virtualenvwrapper -y
+cd ansible
 
-mkvirtualenv jenkinsbox
-pip install ansible
-cd deployment/provisioners/ansible
+virtualenv /tmp/jenkinsbox
+/tmp/jenkinsbox/bin/pip install -r deploy-requirements.txt
 
-ansible-galaxy install -r role-requirements.yml
-ansible-playbook -i inventory/vagrant playbooks/jenkins.yml  -vvvv
+/tmp/jenkinsbox/bin/ansible-galaxy install -r role-requirements.yml --ignore-errors
+/tmp/jenkinsbox/bin/ansible-playbook -i inventory/vagrant playbooks/jenkins.yml  -vvvv
