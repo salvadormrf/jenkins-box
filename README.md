@@ -22,3 +22,22 @@ virtualenv /tmp/jenkinsbox
 /tmp/jenkinsbox/bin/ansible-galaxy install -r role-requirements.yml --ignore-errors
 /tmp/jenkinsbox/bin/ansible-playbook -i inventory/vagrant playbooks/jenkins.yml  -vvvv
 ```
+
+```bash
+# list of Jenkins plugins to be installed
+	git
+	ssh
+	violations
+	image-gallery
+	matrix-auth
+	delivery-pipeline-plugin
+	sloccount
+	role-strategy
+	parameterized-trigger
+	matrix-auth
+	gravatar
+	cobertura
+	build-token-root
+	ws-cleanup
+	email-ext
+```
