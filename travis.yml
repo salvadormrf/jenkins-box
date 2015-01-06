@@ -2,6 +2,9 @@
 language: python
 python: "2.7"
 
+env:
+  - FOO=$(uname -a)
+  
 before_install:
   - sudo apt-get update -qq
   - cd deployment/provisioners/ansible
@@ -19,4 +22,4 @@ script:
 
   # Run the role/playbook with ansible-playbook.
   - ansible-playbook -i inventory/travisci playbooks/travisci.yml --connection=local --sudo
-  
+    
