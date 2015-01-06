@@ -1,6 +1,6 @@
 # Install instructions..
 
-cd ansible
+cd deployment/provisioners/ansible
 
 # create build environment
 virtualenv /tmp/jenkinsbox

@@ -20,6 +20,7 @@ plugins:
   - cobertura
   - build-token-root
   - ws-cleanup
+  - email-ext
   
   # build token root plugin
   # tox
