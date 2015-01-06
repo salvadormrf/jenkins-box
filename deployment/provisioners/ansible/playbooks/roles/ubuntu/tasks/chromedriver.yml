@@ -1,0 +1,36 @@
+---
+
+- name: Ubuntu | chromedriver | Install required system packages.
+  apt: >
+    pkg={{ item }}
+    state=installed
+    update-cache=yes
+  with_items:
+    - chromium-chromedriver
+  tags:
+    - base
+    - packages
+    - provision
+    - chromedriver
+
+# Chromedriver on Ubuntu 14.04 - error while loading shared libraries: libui_base.so
+- name: Ubuntu | chromedriver | Fix chromedriver lib path.
+  shell: >
+    echo '/usr/lib/chromium-browser/libs' > /etc/ld.so.conf.d/chrome_lib.conf && ldconfig
+  tags:
+    - base
+    - packages
+    - provision
+    - chromedriver
+
+- name: Ubuntu | chromedriver | Create symlink to chromedriver.
+  file: >
+    dest=/usr/local/bin/chromedriver
+    src=/usr/lib/chromium-browser/chromedriver
+    state=link
+  tags:
+    - base
+    - packages
+    - provision
+    - chromedriver
+    

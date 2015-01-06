@@ -1,0 +1,26 @@
+---
+- name: Ubuntu | Firefox | Install required system packages.
+  apt: >
+    pkg={{ item }}
+    state=installed
+    update-cache=yes
+  with_items:
+    
+    # firefox headless
+    - firefox
+    - xfonts-100dpi
+    - xfonts-75dpi
+    - xfonts-scalable
+    - xfonts-cyrillic
+    - xvfb
+    - x11-xkb-utils
+    - xdg-utils
+    - x11-apps
+    - dbus-x11
+    
+  tags:
+    - base
+    - packages
+    - provision
+    - app
+    

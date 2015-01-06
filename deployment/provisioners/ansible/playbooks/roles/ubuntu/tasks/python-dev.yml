@@ -1,0 +1,21 @@
+---
+- name: Ubuntu | Python | Install required system packages.
+  apt: >
+    pkg={{ item }}
+    state=installed
+    update-cache=yes
+  with_items:
+    
+    # pyhton code analysis/testing
+    - sloccount
+    - python-tox
+    - pep8
+    - pyflakes
+    - pylint
+    
+  tags:
+    - base
+    - packages
+    - provision
+    - app
+        

@@ -1,0 +1,41 @@
+---
+- name: Ubuntu | Packages | Install required system packages.
+  apt: >
+    pkg={{ item }}
+    state=installed
+    update-cache=yes
+  with_items:
+    # development
+    - build-essential
+    - git
+    
+    # development libs
+    - libxml2
+    - libpng12-0
+    - libssl-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - libpng12-dev
+    - libjpeg-dev
+    - zlib1g-dev
+    - libpq-dev
+    - swig
+    
+    # python
+    - python-dev
+    - python2.7
+    - python2.7-dev
+    - python-setuptools
+    - python-m2crypto
+    - python-virtualenv
+    - python-pip
+    
+    # monitoring
+    - htop
+    
+  tags:
+    - base
+    - packages
+    - provision
+    - app
+    

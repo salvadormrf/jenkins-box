@@ -1,0 +1,15 @@
+---
+
+- name: Gather data about target box
+  hosts: jenkins
+  gather_facts: yes
+  tasks:
+    - debug: Gather Facts
+    
+- name: Configure target box
+  hosts: jenkins
+  sudo: yes
+  roles:
+    - { role: ubuntu }
+    - { role: jenkins } # TODO: get with ansible-galaxy
+    

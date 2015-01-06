@@ -1,0 +1,32 @@
+---
+- name: Ubuntu | Services | Stop services before removing packages.
+  sudo_user: root
+  ignore_errors: yes
+  service: >
+    name={{ item }} 
+    state=stopped
+    enabled=no
+  with_items:
+    - postfix
+    - apache2
+  tags:
+    - base
+    - packages
+    - provision
+    - app
+
+- name: Ubuntu | Packages | Remove unwanted packages.
+  apt: >
+    pkg={{ item }}
+    state=absent
+    update-cache=yes
+  with_items:
+    - apache2
+    - postfix
+    - chef
+    - puppet
+  tags:
+    - base
+    - packages
+    - provision
+    - app
