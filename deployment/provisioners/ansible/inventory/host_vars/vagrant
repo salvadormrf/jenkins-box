@@ -20,3 +20,7 @@ plugins:
   - cobertura
   - build-token-root
   - ws-cleanup
+  
+  # build token root plugin
+  # tox
+  
