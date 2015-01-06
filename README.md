@@ -4,7 +4,7 @@ Deployment template for Jenkins CI
 [![Build Status](https://travis-ci.org/salvadormrf/jenkins-box.svg?branch=master)](https://travis-ci.org/salvadormrf/jenkins-box)
 
 Uses ansible-role forked from  
-https://github.com/ICTO/ansible-jenkins
+https://github.com/ICTO/ansible-jenkins  
 
 
 ```bash
