@@ -15,8 +15,8 @@ script:
   - ansible-galaxy install -r role-requirements.yml
 
   # Check the role/playbook's syntax.
-  - ansible-playbook -i inventory/travisci playbooks/travisci.yml --syntax-check
+  - ansible-playbook -i inventory/travisci playbooks/travisci.yml -vvvv --syntax-check
 
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook -i inventory/travisci playbooks/travisci.yml --connection=local --sudo
+  - ansible-playbook -i inventory/travisci playbooks/travisci.yml -vvvv --connection=local --sudo
     
