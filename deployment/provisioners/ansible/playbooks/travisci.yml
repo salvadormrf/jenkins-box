@@ -10,12 +10,8 @@
   hosts: jenkins
   sudo: yes
   vars:
-    port: 8081
+    port: 8080
     prefix: '/build'
-    email:
-      smtp_host: 'mail.example.com'
-      smtp_ssl: 'true'
-      default_email_suffix: '@example.com'
     plugins:
       - git
       - ssh
