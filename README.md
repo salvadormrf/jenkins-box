@@ -1,10 +1,14 @@
 jenkins-box 
 ===========
 Deployment template for Jenkins CI  
-[![Build Status](https://travis-ci.org/salvadormrf/jenkins-box.svg?branch=master)](https://travis-ci.org/salvadormrf/jenkins-box)
+[![Build Status](https://travis-ci.org/salvadormrf/jenkins-box.svg?branch=master)](https://travis-ci.org/salvadormrf/jenkins-box)  
 
-Uses ansible-role forked from  
-https://github.com/ICTO/ansible-jenkins  
+- installs jenkins-ci
+- install jenkins plugins
+- Install firefox, chromedriver, xvfb, other code analysis tools and pyhton tools
+
+Forked from https://github.com/ICTO/ansible-jenkins
+
 
 ##### Deploy to a vagrant box
 
