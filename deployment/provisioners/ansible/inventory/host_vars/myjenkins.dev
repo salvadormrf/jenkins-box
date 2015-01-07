@@ -1,12 +1,8 @@
----
+
 port: 80
 prefix: '/build'
+startup_delay_s: 60
 
-email:
-  smtp_host: 'mail.example.com'
-  smtp_ssl: 'true'
-  default_email_suffix: '@example.com'
-  
 plugins:
   - git
   - ssh
@@ -17,12 +13,10 @@ plugins:
   - sloccount
   - role-strategy
   - parameterized-trigger
+  - matrix-auth
   - gravatar
   - cobertura
   - build-token-root
   - ws-cleanup
   - email-ext
-  
-  # google apps account
-  - google-login
   

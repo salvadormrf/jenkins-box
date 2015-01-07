@@ -12,6 +12,7 @@
   vars:
     port: 8080
     prefix: '/build'
+    startup_delay_s: 60
     plugins:
       - git
       - ssh
