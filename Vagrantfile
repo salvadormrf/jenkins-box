@@ -20,8 +20,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.define :devbox do |node|
 	    
 	    # box
-	    node.vm.box = "jenkins-box"
-	    node.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
+	    node.vm.box = "ubuntu/precise64"
+	    #node.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
+	    node.vm.box_url = 'https://cloud-images.ubuntu.com/vagrant/precise/20150106/precise-server-cloudimg-amd64-vagrant-disk1.box'
 	    
 	    # set hostname
 	    node.vm.hostname = "myjenkins.dev"

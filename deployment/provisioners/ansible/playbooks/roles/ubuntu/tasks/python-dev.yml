@@ -1,5 +1,5 @@
 ---
-- name: Ubuntu | Python | Install required system packages.
+- name: Ubuntu | Python | (apt) Install required system packages.
   apt: >
     pkg={{ item }}
     state=installed
@@ -8,7 +8,6 @@
     
     # pyhton code analysis/testing
     - sloccount
-    - python-tox
     - pep8
     - pyflakes
     - pylint
@@ -19,3 +18,13 @@
     - provision
     - app
         
+- name: Ubuntu | Python| (pip) Install required system packages.
+  pip: >
+    name={{ item }} 
+  with_items:
+    - tox
+  tags:
+    - base
+    - packages
+    - provision
+    - app
