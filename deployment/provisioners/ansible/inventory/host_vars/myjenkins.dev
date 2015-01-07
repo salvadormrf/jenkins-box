@@ -1,10 +1,12 @@
 ---
-port: 8081
+port: 80
 prefix: '/build'
+
 email:
   smtp_host: 'mail.example.com'
   smtp_ssl: 'true'
   default_email_suffix: '@example.com'
+  
 plugins:
   - git
   - ssh
@@ -15,13 +17,12 @@ plugins:
   - sloccount
   - role-strategy
   - parameterized-trigger
-  - matrix-auth
   - gravatar
   - cobertura
   - build-token-root
   - ws-cleanup
   - email-ext
   
-  # build token root plugin
-  # tox
+  # google apps account
+  - google-login
   
