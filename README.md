@@ -38,7 +38,6 @@ virtualenv /tmp/jenkinsbox
 myciserver.com ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/me/key.pem
 
 # create inventory/host_vars/myciserver.com file
-port: 80
 prefix: '/build'
 startup_delay_s: 60
 
