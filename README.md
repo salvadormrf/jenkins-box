@@ -118,7 +118,7 @@ To avoid getting locked, first allow anonymous users to be able to do everything
 
 
 **Notes:** 
-- templates needs to be added to JENKINS_HOME/emaill_templates/
+- templates needs to be added to JENKINS_HOME/emaill-templates/
 
 
 ### Jobs Email notifications
